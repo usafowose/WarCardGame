@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarGame", "WarGame\WarGame.csproj", "{4D85157E-68B0-4DE8-93A2-086808961EA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarGame.Tests", "WarGame.Tests\WarGame.Tests.csproj", "{1709E222-A073-4842-A5E5-AF5FC00227F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D85157E-68B0-4DE8-93A2-086808961EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D85157E-68B0-4DE8-93A2-086808961EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D85157E-68B0-4DE8-93A2-086808961EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D85157E-68B0-4DE8-93A2-086808961EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1709E222-A073-4842-A5E5-AF5FC00227F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1709E222-A073-4842-A5E5-AF5FC00227F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1709E222-A073-4842-A5E5-AF5FC00227F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1709E222-A073-4842-A5E5-AF5FC00227F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC7F451D-B302-423D-B592-74097CDB2657}
+	EndGlobalSection
+EndGlobal
