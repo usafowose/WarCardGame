@@ -8,5 +8,14 @@ namespace WarGame_ClassLib
 {
     class Card
     {
+        bool IsShowing;
+        Dictionary<int, string> NameAndValue; 
+
+        public Card(Dictionary<int, string> CardType) 
+        {
+            IsShowing = false;
+            NameAndValue = CardType; 
+        }
     }
 }
+
