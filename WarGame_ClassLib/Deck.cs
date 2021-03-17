@@ -4,13 +4,13 @@ using System.Text;
 
 namespace WarGame
 {
-    
+
     class Deck
     {
         //attributes
 
         //also need list of card objects
-        List<Card> cards = new List<Card>() 
+        List<Card> cards = new List<Card>()
         int deckSize = 52;
         List<(string, int)> faces = new List<(string face, int value)>() 
         // list of tuples instead of a dictionary, because we need to iterate over it 
@@ -43,7 +43,7 @@ namespace WarGame
         //methods
 
         //instatniate deck class with constructor
-        public Deck(in deckSize);
+        public Deck(int deckSize);
         {
 
         cards_idx = 0;
@@ -54,12 +54,12 @@ namespace WarGame
             {
                 string card_name = $"{faces[j][0]}_of_{suits[i]}";
 
-                cards[cards_idx].name = card_name; // here we are inserting into the list
+        cards[cards_idx].name = card_name; // here we are inserting into the list
                 cards[cards_idx].value = faces[j][1] //here we insert value 
                 card_idx++;
-            }
-            
-            }
+    }
+
+}
         }
     }
 }
