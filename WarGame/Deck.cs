@@ -11,8 +11,8 @@ namespace WarGame
 
         //also need list of card objects
         List<Card> cards = new List<Card>() 
-        List<int> deckSize = 52;
-        List<string> faces = new List<(string face, int value)>() 
+        int deckSize = 52;
+        List<(string, int)> faces = new List<(string face, int value)>() 
         // list of tuples instead of a dictionary, because we need to iterate over it 
         {
            ("one", 1),
@@ -31,7 +31,7 @@ namespace WarGame
            ("ace", 14)
         };
 
-        List<string> suits = new List<>()
+        List<string> suits = new List<string>()
         {
            "heart",
            "diamond",
