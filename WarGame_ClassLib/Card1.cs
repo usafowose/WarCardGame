@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace WarGame_ClassLib
 {
-    class Card
+    public class Card
     {
         bool IsShowing;
-        public int value;
-        public string name; 
+        public int NumValue { get; set; }
+        public string SuitName { get; set; }
 
-        public Card(string name, int value) 
+        public Card(int NumValue, string SuitName) 
         {
             IsShowing = false;
-            this.name = name ;
-            this.value = value;
+            this.SuitName = SuitName ;
+            this.NumValue = NumValue;
         }
     }
 
@@ -27,8 +27,10 @@ namespace WarGame_ClassLib
     //            var Deck = new List<Card>() { };
 
 
-    //            List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-    //            List<string> Suites = new List<string>() { "Spades, Hearts, Diamonds, Clubs" };
+    //            List<int> NumValues = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    //            List<string> SuitNames = new List<string>() { "Spades, Hearts, Diamonds, Clubs" };
+    //            int DeckSize = 52;
+    //            List<Card> CardsInDeck = new List<Card>(); 
 
     //            for (int i = 0; i < Numbers.Count; i++)
     //            {
