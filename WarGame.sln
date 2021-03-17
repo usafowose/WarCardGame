@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarGame", "WarGame\WarGame.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarGame.Tests", "WarGame.Tests\WarGame.Tests.csproj", "{1709E222-A073-4842-A5E5-AF5FC00227F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarGame_ClassLib", "WarGame_ClassLib\WarGame_ClassLib.csproj", "{D006F755-D6DF-4A34-9115-7A877A5D7F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarGame_ClassLib", "WarGame_ClassLib\WarGame_ClassLib.csproj", "{D006F755-D6DF-4A34-9115-7A877A5D7F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
