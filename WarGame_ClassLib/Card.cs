@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WarGame_ClassLib
 {
-    class Card
+    public class Card
     {
         bool IsShowing;
         Dictionary<int, string> NameAndValue; 

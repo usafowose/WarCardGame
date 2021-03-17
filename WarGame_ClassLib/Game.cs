@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections.Concurrent;
 
-namespace WarGame
+namespace WarGame_ClassLib
 {
     public class Game
     {
@@ -18,7 +18,7 @@ namespace WarGame
             TurnCards = new List<Card>();
         }
 
-        public void DealCardsToPlayer(Player player, int startIndex, int numberOfCards, Card[] cards)
+        private void DealCardsToPlayer(Player player, int startIndex, int numberOfCards, Card[] cards)
         {
             int first = 0;
             while (first < numberOfCards)
