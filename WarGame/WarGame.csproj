@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Deck.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="EightSpades.svg" />
   </ItemGroup>
 
