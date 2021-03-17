@@ -27,7 +27,8 @@ namespace WarGame
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PlayGame newGame = new PlayGame();
+            var playerName = txtBoxPlayerName1.Text;
+            PlayGame newGame = new PlayGame(playerName);
             newGame.Show();
         }
     }

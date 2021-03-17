@@ -17,9 +17,10 @@ namespace WarGame
     /// </summary>
     public partial class PlayGame : Window
     {
-        public PlayGame()
+        public PlayGame(string playerName)
         {
             InitializeComponent();
+            lblShowPlayerName.Content = playerName;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
