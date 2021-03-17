@@ -61,9 +61,9 @@ namespace WarGame.Tests
 
             // Assert
             Assert.AreEqual(3, testPlayer.PlayerCards.Count);
-            Assert.AreEqual(5, testPlayer.PlayerCards.Dequeue().Value);
-            Assert.AreEqual(7, testPlayer.PlayerCards.Dequeue().Value);
-            Assert.AreNotEqual("Diamond", testPlayer.PlayerCards.Dequeue().Name);
+            Assert.AreEqual(5, testPlayer.PlayerCards.Dequeue().NumValue);
+            Assert.AreEqual(7, testPlayer.PlayerCards.Dequeue().NumValue);
+            Assert.AreNotEqual("Diamond", testPlayer.PlayerCards.Dequeue().SuitName);
             Assert.AreEqual(0, testPlayer.PlayerCards.Count);
         }
 
@@ -85,7 +85,7 @@ namespace WarGame.Tests
 
             // Assert
             Assert.AreEqual(3, testPlayer.PlayerCards.Count);
-            Assert.AreEqual(5, testPlayer.PlayerCards.Dequeue().Value);
+            Assert.AreEqual(5, testPlayer.PlayerCards.Dequeue().NumValue);
         }
 
         [TestMethod]
@@ -106,12 +106,12 @@ namespace WarGame.Tests
             // Assert
             Assert.AreEqual(typeof(Card), testShownCard.GetType());
             Assert.AreEqual(1, testPlayer.PlayerCards.Count);
-            Assert.AreEqual("Heart", testShownCard.Name);
-            Assert.AreNotEqual("Diamond", testShownCard.Name);
-            Assert.AreEqual(5, testShownCard.Value);
-            Assert.AreNotEqual(8, testPlayer.PlayerCards.Peek().Value);
-            Assert.AreEqual(7, testPlayer.PlayerCards.Peek().Value);
-            Assert.AreEqual("Diamond", testPlayer.ShowCard().Name);
+            Assert.AreEqual("Heart", testShownCard.SuitName);
+            Assert.AreNotEqual("Diamond", testShownCard.SuitName);
+            Assert.AreEqual(5, testShownCard.NumValue);
+            Assert.AreNotEqual(8, testPlayer.PlayerCards.Peek().NumValue);
+            Assert.AreEqual(7, testPlayer.PlayerCards.Peek().NumValue);
+            Assert.AreEqual("Diamond", testPlayer.ShowCard().SuitName);
             Assert.IsNull(testPlayer.ShowCard());  
         }
 
@@ -140,9 +140,9 @@ namespace WarGame.Tests
 
             // Assert
             Assert.AreEqual(4, testPlayer.CardsForShuffle.Count);
-            Assert.AreEqual(6, testPlayer.CardsForShuffle[2].Value);
-            Assert.AreNotEqual("Heart", testPlayer.CardsForShuffle[3].Name);
-            Assert.AreEqual("Spade", testPlayer.CardsForShuffle[3].Name);
+            Assert.AreEqual(6, testPlayer.CardsForShuffle[2].NumValue);
+            Assert.AreNotEqual("Heart", testPlayer.CardsForShuffle[3].SuitName);
+            Assert.AreEqual("Spade", testPlayer.CardsForShuffle[3].SuitName);
         }
 
         [TestMethod]
@@ -171,7 +171,7 @@ namespace WarGame.Tests
             Assert.AreNotEqual(0, testPlayer.PlayerCards.Count);
             Assert.AreEqual(0, testPlayer.CardsForShuffle.Count);
             Assert.AreNotEqual(5, testPlayer.CardsForShuffle.Count);
-            Assert.AreEqual(5, testPlayer.PlayerCards.Peek().Value);
+            Assert.AreEqual(5, testPlayer.PlayerCards.Peek().NumValue);
         }
 
     }
