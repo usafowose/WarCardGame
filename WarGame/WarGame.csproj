@@ -10,8 +10,4 @@
     <None Remove="EightSpades.svg" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="EightSpades.svg" />
-  </ItemGroup>
-
 </Project>

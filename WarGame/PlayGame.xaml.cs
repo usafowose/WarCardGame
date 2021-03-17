@@ -23,7 +23,7 @@ namespace WarGame
             lblShowPlayerName.Content = playerName;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnMakeTurn_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Hello Dream Team!!!");
         }
