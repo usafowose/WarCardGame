@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarGame", "WarGame\WarGame.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarGame.Tests", "WarGame.Tests\WarGame.Tests.csproj", "{1709E222-A073-4842-A5E5-AF5FC00227F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarGame_ClassLib", "WarGame_ClassLib\WarGame_ClassLib.csproj", "{D006F755-D6DF-4A34-9115-7A877A5D7F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarGame_ClassLib", "WarGame_ClassLib\WarGame_ClassLib.csproj", "{D006F755-D6DF-4A34-9115-7A877A5D7F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{DA8E7B86-306D-4FCF-A51B-0D7C34900CB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D006F755-D6DF-4A34-9115-7A877A5D7F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D006F755-D6DF-4A34-9115-7A877A5D7F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D006F755-D6DF-4A34-9115-7A877A5D7F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8E7B86-306D-4FCF-A51B-0D7C34900CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8E7B86-306D-4FCF-A51B-0D7C34900CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8E7B86-306D-4FCF-A51B-0D7C34900CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8E7B86-306D-4FCF-A51B-0D7C34900CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
