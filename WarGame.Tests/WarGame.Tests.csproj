@@ -14,7 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\WarGame\WarGame.csproj" />
+=======
+>>>>>>> b8f6340a6f32b146f1d7b94764a07fc1125254c1
     <ProjectReference Include="..\WarGame_ClassLib\WarGame_ClassLib.csproj" />
   </ItemGroup>
 

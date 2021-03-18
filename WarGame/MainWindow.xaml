@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WarGame"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#f65009">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="67*"/>
@@ -16,8 +16,11 @@
             <RowDefinition Height="110*"/>
             <RowDefinition Height="107*"/>
         </Grid.RowDefinitions>
-        <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Right" Margin="0,186,352,0" Grid.RowSpan="3" VerticalAlignment="Top" Height="53" Width="133" Click="Button_Click"/>
-        <Label Content="War Game" HorizontalAlignment="Left" Margin="205,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="70" Grid.Row="1" Width="327" FontSize="20"/>
-
+        <Label Content="WAR" Margin="197,10,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Right" Margin="0,107,380,0" VerticalAlignment="Top" Height="53" Width="133" Click="Button_Click" RenderTransformOrigin="0.453,2.055" Grid.Row="2"/>
+        <TextBox x:Name="txtBoxPlayerName1" HorizontalAlignment="Left" Margin="197,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtBoxPlayerName2" Grid.Column="1" HorizontalAlignment="Left" Margin="159,42,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Player1: Please enter your name" HorizontalAlignment="Left" Margin="197,10,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="160"/>
+        <Label Content="Player2: Please enter your name" Grid.Column="1" HorizontalAlignment="Left" Margin="159,11,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.425,-0.115" Width="160"/>
     </Grid>
 </Window>
