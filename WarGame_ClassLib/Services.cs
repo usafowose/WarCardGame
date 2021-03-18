@@ -8,7 +8,7 @@ namespace WarGame_ClassLib
 {
     public class Services
     {
-        public static List<Card> ShuffleCards(List<Card> CardsToShuffle)
+        public static void ShuffleCards(List<Card> CardsToShuffle)
         {
             Random random = new Random();
             int n = CardsToShuffle.Count;
@@ -21,9 +21,7 @@ namespace WarGame_ClassLib
                 CardsToShuffle[rnd] = CardsToShuffle[i];
                 CardsToShuffle[i] = value;
             }
-
-            return CardsToShuffle;
+            //return CardsToShuffle;
         }
-
     }
 }

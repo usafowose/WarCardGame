@@ -1,53 +1,50 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WarGame_ClassLib
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-
-    namespace WarGame
+    public class Player
     {
-        public class Player
+        public string PlayerName { get; set; }
+        public Queue<Card> PlayerCards { get; set;}
+        public List<Card> CardsForShuffle { get; set; }
+        public Card TurnCard { get; set; }
+
+        public Player(string player)
         {
-            public string PlayerName { get; set; }
-            public Queue<Card> PlayerCards { get; set;}
-            public List<Card> CardsForShuffle { get; set; }
+            PlayerName = player;
+            PlayerCards = new Queue<Card>();
+            CardsForShuffle = new List<Card>();
+        }
 
-            public Player(string player)
+        public Card ShowCard()
+        {
+            if (IsPlayerCardsEmpty() == true)
             {
-                PlayerName = player;
-                PlayerCards = new Queue<Card>();
-                CardsForShuffle = new List<Card>();
+                return null;
             }
 
-            public Card ShowCard()
-            {
-                if (IsPlayerCardsEmpty() == true)
-                {
-                    return null;
-                }
+            return PlayerCards.Dequeue();
+        }
 
-                return PlayerCards.Dequeue();
-            }
+        public void AddCards(List<Card> newCards)
+        {
+            CardsForShuffle.AddRange(newCards);
+        }
 
-            public void AddCards(List<Card> newCards)
+        public void MoveToPlayerCards()
+        {
+            if (IsPlayerCardsEmpty())
             {
-                CardsForShuffle.AddRange(newCards);
-            }
-
-            public void MoveToPlayerCards()
-            {
-                //Service.Shuffle(CardsForShuffle);
+                Services.ShuffleCards(CardsForShuffle);
                 CardsForShuffle.ForEach(card => PlayerCards.Enqueue(card));
-                CardsForShuffle = new List<Card>();
-            }
-
-            private bool IsPlayerCardsEmpty()
-            {
-                return PlayerCards.Count == 0;
+                CardsForShuffle.Clear();
             }
         }
-    }
 
+        public bool IsPlayerCardsEmpty()
+        {
+            return PlayerCards.Count == 0;
+        }
+    }
 }
