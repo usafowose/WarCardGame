@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WarGame_ClassLib;
 
 namespace WarGame
 {
@@ -17,9 +18,11 @@ namespace WarGame
     /// </summary>
     public partial class PlayGame : Window
     {
+        Game game = new Game();
         public PlayGame(string playerName)
         {
             InitializeComponent();
+
             lblShowPlayerName.Content = playerName;
         }
 

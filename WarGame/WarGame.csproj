@@ -10,4 +10,8 @@
     <None Remove="EightSpades.svg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WarGame_ClassLib\WarGame_ClassLib.csproj" />
+  </ItemGroup>
+
 </Project>
