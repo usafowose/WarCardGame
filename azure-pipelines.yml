@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- releases/*
 
 pool:
   vmImage: 'windows-latest'
@@ -33,6 +34,3 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-trigger:
-- master
-- releases/*
