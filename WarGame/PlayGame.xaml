@@ -8,14 +8,16 @@
         Title="PlayGame" Height="450" Width="800" Background="#FF41945F">
     <Grid>
         <Button x:Name="btnMakeTurn" Content="Make a turn" HorizontalAlignment="Left" Margin="608,72,0,0" VerticalAlignment="Top" Width="128" Click="btnMakeTurn_Click" Height="33"/>
-        <Label x:Name="lblShowPlayerName" Content="" HorizontalAlignment="Left" Margin="45,199,0,0" VerticalAlignment="Top" Width="174" RenderTransformOrigin="-1.082,2.135"/>
-        <Image x:Name="imgPlayer1" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="45,100,650,-100" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgPlayer2" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="18,28,623,267" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgPlayer1War" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="230,-121,465,121" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgPlayer2War" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="230,100,465,-100" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgPlayer1WarBet" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="378,-120,317,120" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgPlayer2WarBet" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="378,100,317,-100" RenderTransformOrigin="0.592,0.389" />
+        <Label x:Name="lblShowPlayerName" Content="" HorizontalAlignment="Left" Margin="45,199,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="-1.082,2.135"/>
+        <Image x:Name="imgPlayer" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="45,100,650,-100" RenderTransformOrigin="0.592,0.389" />
+        <Image x:Name="imgComputer" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="18,28,623,267" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWar" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="230,-121,465,121" RenderTransformOrigin="0.592,0.389" />
+        <Image x:Name="imgPlayerWar" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="230,100,465,-100" RenderTransformOrigin="0.592,0.389" />
+        <Image x:Name="imgComputerWarBet" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="378,-120,317,120" RenderTransformOrigin="0.592,0.389" />
+        <Image x:Name="imgPlayerWarBet" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="378,100,317,-100" RenderTransformOrigin="0.592,0.389" />
         <Button x:Name="btnDeclareWar" Content="Declare a War" HorizontalAlignment="Left" Margin="608,134,0,0" VerticalAlignment="Top" Width="128" Height="33"/>
-
+        <Label x:Name="lblComputerCardTurn" HorizontalAlignment="Left" Margin="230,183,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="lblPlayerCardTurn" HorizontalAlignment="Left" Margin="230,217,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.506,4.261"/>
+        <Label x:Name="lblTurnResult" HorizontalAlignment="Left" Margin="588,247,0,0" VerticalAlignment="Top" Width="172"/>
     </Grid>
 </Window>

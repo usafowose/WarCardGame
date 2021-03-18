@@ -18,17 +18,28 @@ namespace WarGame
     /// </summary>
     public partial class PlayGame : Window
     {
-        Game game = new Game();
+        Game Game { get; set; }
+        Player PlayerComputer { get; set; }
+        Player Player { get; set; }
+
         public PlayGame(string playerName)
         {
             InitializeComponent();
-
+            Game = new Game();
+            PlayerComputer = new Player("Computer");
+            Player = new Player(playerName);
+            Game.Players.Add(PlayerComputer);
+            Game.Players.Add(Player);
+            Game.DealCards();
             lblShowPlayerName.Content = playerName;
         }
 
         private void btnMakeTurn_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello Dream Team!!!");
+            string result = Game.Turn();
+            lblComputerCardTurn.Content = PlayerComputer.TurnCard.ToString();
+            lblPlayerCardTurn.Content = Player.TurnCard.ToString();
+            lblTurnResult.Content = result;
         }
     }
 }

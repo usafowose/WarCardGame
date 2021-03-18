@@ -119,6 +119,7 @@ namespace WarGame_ClassLib
             foreach (var player in Players)
             {
                 var card = player.ShowCard();
+                player.TurnCard = card;
                 TurnCards.Add(card);
                 playerCardDict.TryAdd(card, player);
             }

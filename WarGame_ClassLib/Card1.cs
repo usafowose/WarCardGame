@@ -18,6 +18,11 @@ namespace WarGame_ClassLib
             this.SuitName = SuitName ;
             this.NumValue = NumValue;
         }
+
+        public override string ToString()
+        {
+            return SuitName + NumValue;
+        }
     }
 
    

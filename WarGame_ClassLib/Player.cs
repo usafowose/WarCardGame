@@ -8,6 +8,7 @@ namespace WarGame_ClassLib
         public string PlayerName { get; set; }
         public Queue<Card> PlayerCards { get; set;}
         public List<Card> CardsForShuffle { get; set; }
+        public Card TurnCard { get; set; }
 
         public Player(string player)
         {
