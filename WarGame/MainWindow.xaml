@@ -6,12 +6,36 @@
         xmlns:local="clr-namespace:WarGame"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#f65009">
-        <Label Content="WAR" Margin="197,10,0,0" VerticalAlignment="Top" Width="180"/>
-        <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Right" Margin="0,107,380,0" VerticalAlignment="Top" Height="53" Width="133" Click="Button_Click" RenderTransformOrigin="0.453,2.055" Grid.Row="2"/>
-        <TextBox x:Name="txtBoxPlayerName1" HorizontalAlignment="Left" Margin="197,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtBoxPlayerName2" Grid.Column="1" HorizontalAlignment="Left" Margin="159,42,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Player1: Please enter your name" HorizontalAlignment="Left" Margin="197,10,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="160"/>
-        <Label Content="Player2: Please enter your name" Grid.Column="1" HorizontalAlignment="Left" Margin="159,11,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.425,-0.115" Width="160"/>
+    <Grid Opacity="0.9">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF72AAD0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="♠ ♣ W A R ♥ ♦" Margin="0,150,0,0" VerticalAlignment="Top" Width="500" HorizontalAlignment="Center" FontSize="48" RenderTransformOrigin="0.5,0.5" Foreground="#FFEF3B3B" FontFamily="Engravers MT">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-4"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="♠" Margin="581,290,0,0" VerticalAlignment="Top" Opacity="0.8" Width="100" HorizontalAlignment="Left" FontSize="72" RenderTransformOrigin="0.5,0.5" Foreground="#FFEF3B3B" FontFamily="Engravers MT" Panel.ZIndex="10">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.75" ScaleY="1.75"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="15.464"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+        <Button Content="Start Game" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Height="43" Width="132" Click="Button_Click" RenderTransformOrigin="0.453,2.055" Cursor="ArrowCD" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxPlayerName1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,100,0,0"/>
+        <Label Content="Please enter your name" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="161" FontFamily="Mongolian Baiti" Margin="0,150,0,0" FontSize="16" Opacity="0.6"/>
     </Grid>
 </Window>
