@@ -19,7 +19,7 @@ namespace WarGame
     /// </summary>
     public partial class PlayGame : Window
     {
-        //TODO - figuring out the better approach to get images
+        //TODO - find out the better approach to get images
         string backImagePath = Directory.GetCurrentDirectory() + "/CardPNGs/backdesign_6.PNG";
 
         Game Game { get; set; }
@@ -44,24 +44,29 @@ namespace WarGame
 
         private void btnMakeTurn_Click(object sender, RoutedEventArgs e)
         {
+            //TODO - improve DRY code in these two button click methods
             imgComputerWarCard.Source = null;
-            imgComputerWarBet.Source = null;
+            imgComputerWarCard2.Source = null;
+            imgComputerWarCard3.Source = null;
             imgPlayerWarCard.Source = null;
+            imgPlayerWarCard2.Source = null;
+            imgPlayerWarCard3.Source = null;
+            imgComputerWarBet.Source = null;
             imgPlayerWarBet.Source = null;
+
             bool result = Game.Turn();
             int cardTotalPlayer = Player.PlayerCards.Count + Player.CardsForShuffle.Count;
             int cardTotalComputer = PlayerComputer.PlayerCards.Count + PlayerComputer.CardsForShuffle.Count;
-            lblComputerCardTurn.Content = PlayerComputer.TurnCard.ToString();
             imgComputerTurnCard.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + $"/CardPNGs/{PlayerComputer.TurnCard.ToString()}.PNG"));
-            lblPlayerCardTurn.Content = Player.TurnCard.ToString();
             imgPlayerTurnCard.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"CardPNGs/{Player.TurnCard.ToString()}.PNG"));
-            lblTurnResult.Content = Game.TurnStatus;
+
             lblTotalCards.Content = cardTotalPlayer;
             if ((result && (cardTotalPlayer < 4 || cardTotalComputer < 4)) || Game.GameOver())
             {
                 btnDeclareWar.Visibility = Visibility.Hidden;
                 btnMakeTurn.Visibility = Visibility.Hidden;
                 btnNewGame.Visibility = Visibility.Visible;
+                MessageBox.Show($"Player {Game.GameWinner().PlayerName} wins!");
             }
             if (result)
             {
@@ -76,18 +81,22 @@ namespace WarGame
             imgComputerWarCard2.Source = new BitmapImage(new Uri(backImagePath));
             imgComputerWarCard3.Source = new BitmapImage(new Uri(backImagePath));
             imgPlayerWarCard.Source = new BitmapImage(new Uri(backImagePath));
+            imgPlayerWarCard2.Source = new BitmapImage(new Uri(backImagePath));
+            imgPlayerWarCard3.Source = new BitmapImage(new Uri(backImagePath));
+
             bool result = Game.DeclareWar();
             int cardTotalPlayer = Player.PlayerCards.Count + Player.CardsForShuffle.Count;
             int cardTotalComputer = PlayerComputer.PlayerCards.Count + PlayerComputer.CardsForShuffle.Count;
             imgComputerWarBet.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + $"/CardPNGs/{PlayerComputer.TurnCard.ToString()}.PNG"));
             imgPlayerWarBet.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"CardPNGs/{Player.TurnCard.ToString()}.PNG"));
-            lblTurnResult.Content = Game.TurnStatus;
+
             lblTotalCards.Content = cardTotalPlayer;
             if ((result && (cardTotalPlayer < 4 || cardTotalComputer < 4)) || Game.GameOver())
             {
                 btnDeclareWar.Visibility = Visibility.Hidden;
                 btnMakeTurn.Visibility = Visibility.Hidden;
                 btnNewGame.Visibility = Visibility.Visible;
+                MessageBox.Show($"Player {Game.GameWinner().PlayerName} wins!");
             }
             if (result)
             {
@@ -99,6 +108,13 @@ namespace WarGame
                 btnDeclareWar.Visibility = Visibility.Hidden;
                 btnMakeTurn.Visibility = Visibility.Visible;
             }
+        }
+
+        private void btnNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow newGame = new MainWindow();
+            newGame.Show();
+            this.Close();
         }
     }
 }

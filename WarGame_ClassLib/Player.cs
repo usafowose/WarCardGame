@@ -19,11 +19,10 @@ namespace WarGame_ClassLib
 
         public Card ShowCard()
         {
-            if (IsPlayerCardsEmpty() == true)
+            if (IsPlayerCardsEmpty())
             {
                 return null;
             }
-
             return PlayerCards.Dequeue();
         }
 
@@ -32,9 +31,9 @@ namespace WarGame_ClassLib
             CardsForShuffle.AddRange(newCards);
         }
 
-        public void MoveToPlayerCards()
+        public void MoveToPlayerCards(int cardsLeft)
         {
-            if (IsPlayerCardsEmpty())
+            if (PlayerCards.Count < cardsLeft)
             {
                 Services.ShuffleCards(CardsForShuffle);
                 CardsForShuffle.ForEach(card => PlayerCards.Enqueue(card));

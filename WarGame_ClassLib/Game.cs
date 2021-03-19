@@ -10,7 +10,6 @@ namespace WarGame_ClassLib
         public Deck Deck { get; set; }
         public List<Player> Players { get; set; }
         public List<Card> TurnCards { get; set; }
-        public string TurnStatus { get; set; }
         public string Winner { get; set; }
 
         public Game()
@@ -77,11 +76,11 @@ namespace WarGame_ClassLib
             return winner;
         }
 
-        public void CheckPlayersDecks()
+        public void CheckPlayersDecks(int num)
         {
             foreach (var player in Players)
             {
-                player.MoveToPlayerCards();
+                player.MoveToPlayerCards(num);
             }
         }
 
@@ -119,7 +118,7 @@ namespace WarGame_ClassLib
 
         public bool Turn()
         {
-            CheckPlayersDecks();
+            CheckPlayersDecks(1);
             var playerCardDict = new ConcurrentDictionary<Card, Player>();
             List<Card> thisTurnCards = new List<Card>();
             foreach (var player in Players)
@@ -132,20 +131,18 @@ namespace WarGame_ClassLib
             }
             if (IsDeclareWar(thisTurnCards))
             {
-                TurnStatus = "Declare a War";
                 return true;
             }
             var maxCard = MaxCard(thisTurnCards);
             var turnWinner = playerCardDict[maxCard];
             turnWinner.AddCards(TurnCards);
             TurnCards.Clear();
-            TurnStatus = $"Player {turnWinner.PlayerName} wins.";
             return false;
         }
 
         public bool DeclareWar()
         {
-            CheckPlayersDecks();
+            CheckPlayersDecks(3);
             for (int i = 0; i < 3; i++)
             {
                 foreach (var player in Players)

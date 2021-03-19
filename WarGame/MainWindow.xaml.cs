@@ -30,6 +30,7 @@ namespace WarGame
             var playerName = txtBoxPlayerName1.Text;
             PlayGame newGame = new PlayGame(playerName);
             newGame.Show();
+            this.Close();
         }
     }
 }
