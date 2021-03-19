@@ -11,6 +11,7 @@ namespace WarGame_ClassLib
         public List<Player> Players { get; set; }
         public List<Card> TurnCards { get; set; }
         public string TurnStatus { get; set; }
+        public string Winner { get; set; }
 
         public Game()
         {
@@ -35,7 +36,6 @@ namespace WarGame_ClassLib
         public void DealCards()
         {
             int numberOfPlayers = Players.Count;
-            //Deck.CreateDeck();
             int numberOfCardsInDeck = Deck.CardsInDeck.Count;
             if (numberOfPlayers == 0 || numberOfCardsInDeck % numberOfPlayers != 0)
             {
@@ -89,17 +89,8 @@ namespace WarGame_ClassLib
         {
             int max = int.MinValue;
             Card maxCard = null;
-            HashSet<int> values = new HashSet<int>();
             foreach (var card in cards)
             {
-                if (values.Contains(card.NumValue))
-                {
-                    return null;
-                }
-                else
-                {
-                    values.Add(card.NumValue);
-                }
                 if (card.NumValue > max)
                 {
                     maxCard = card;
@@ -109,49 +100,61 @@ namespace WarGame_ClassLib
             return maxCard;
         }
 
+        public bool IsDeclareWar(List<Card> cards)
+        {
+            HashSet<int> values = new HashSet<int>();
+            foreach (var card in cards)
+            {
+                if (values.Contains(card.NumValue))
+                {
+                    return true;
+                }
+                else
+                {
+                    values.Add(card.NumValue);
+                }
+            }
+            return false;
+        }
+
         public bool Turn()
         {
             CheckPlayersDecks();
-            if (GameOver())
-            {
-                TurnStatus = $"Player {GameWinner().PlayerName} wins the game!";
-                return false;
-            }
             var playerCardDict = new ConcurrentDictionary<Card, Player>();
+            List<Card> thisTurnCards = new List<Card>();
             foreach (var player in Players)
             {
                 var card = player.ShowCard();
                 player.TurnCard = card;
                 TurnCards.Add(card);
+                thisTurnCards.Add(card);
                 playerCardDict.TryAdd(card, player);
             }
-            var maxCard = MaxCard(TurnCards);
-            if (maxCard == null)
+            if (IsDeclareWar(thisTurnCards))
             {
                 TurnStatus = "Declare a War";
                 return true;
             }
+            var maxCard = MaxCard(thisTurnCards);
             var turnWinner = playerCardDict[maxCard];
             turnWinner.AddCards(TurnCards);
             TurnCards.Clear();
-            TurnStatus = $"Player {turnWinner.PlayerName} wins. Click for next turn.";
+            TurnStatus = $"Player {turnWinner.PlayerName} wins.";
             return false;
         }
 
-        public void DeclareWar()
+        public bool DeclareWar()
         {
             CheckPlayersDecks();
-            if (GameOver())
+            for (int i = 0; i < 3; i++)
             {
-                TurnStatus = $"Player {GameWinner().PlayerName} wins the game!";
-                return;
+                foreach (var player in Players)
+                {
+                    var card = player.ShowCard();
+                    TurnCards.Add(card);
+                }
             }
-            foreach (var player in Players)
-            {
-                var card = player.ShowCard();
-                TurnCards.Add(card);
-            }
-            Turn();
+            return Turn();
         }
     }
 }

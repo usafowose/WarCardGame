@@ -7,19 +7,27 @@
         mc:Ignorable="d"
         Title="PlayGame" Height="450" Width="800" Background="#FF41945F">
     <Grid>
-        <Button x:Name="btnMakeTurn" Content="Make a turn" HorizontalAlignment="Left" Margin="608,65,0,0" VerticalAlignment="Top" Width="128" Click="btnMakeTurn_Click" Height="33"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="263*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnMakeTurn" Content="Make a turn" HorizontalAlignment="Left" Margin="82,65,0,0" VerticalAlignment="Top" Width="128" Click="btnMakeTurn_Click" Height="33" Grid.Column="1"/>
         <Label x:Name="lblShowPlayerName" Content="" HorizontalAlignment="Left" Margin="45,199,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="-1.082,2.135"/>
-        <Image x:Name="imgComputerDeck" Margin="44,44,649,283" RenderTransformOrigin="-0.631,-0.765" />
-        <Button x:Name="btnDeclareWar" Content="Declare a War" HorizontalAlignment="Left" Margin="608,134,0,0" VerticalAlignment="Top" Width="128" Height="33"/>
+        <Image x:Name="imgComputerDeck" Margin="44,44,375,283" RenderTransformOrigin="-0.631,-0.765" />
+        <Button x:Name="btnDeclareWar" Content="Declare a War" HorizontalAlignment="Left" Margin="82,134,0,0" VerticalAlignment="Top" Width="128" Height="33" Click="btnDeclareWar_Click" Grid.Column="1"/>
         <Label x:Name="lblComputerCardTurn" HorizontalAlignment="Left" Margin="230,183,0,0" VerticalAlignment="Top" Width="105"/>
         <Label x:Name="lblPlayerCardTurn" HorizontalAlignment="Left" Margin="230,217,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.506,4.261"/>
-        <Label x:Name="lblTurnResult" HorizontalAlignment="Left" Margin="588,247,0,0" VerticalAlignment="Top" Width="172"/>
-        <Image x:Name="imgComputerTurnCard" Margin="165,44,528,283" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgComputerWarCard" Margin="333,43,360,284" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgComputerWarBet" Margin="440,44,253,283" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgPlayerDeck" Margin="44,266,649,61" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgPlayerTurnCard" Margin="165,266,528,61" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgPlayerWarCard" Margin="333,266,360,61" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgPlayerWarBet" Margin="440,266,253,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Label x:Name="lblTurnResult" HorizontalAlignment="Left" Margin="62,247,0,0" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+        <Image x:Name="imgComputerTurnCard" Margin="165,44,254,283" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWarCard" Margin="333,43,86,284" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWarBet" Margin="440,44,253,283" RenderTransformOrigin="-0.631,-0.765" Grid.ColumnSpan="2" />
+        <Image x:Name="imgPlayerDeck" Margin="44,266,375,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerTurnCard" Margin="165,266,254,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerWarCard" Margin="333,266,86,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerWarBet" Margin="440,266,253,61" RenderTransformOrigin="-0.631,-0.765" Grid.ColumnSpan="2" />
+        <Label x:Name="lblTotalCards" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnNewGame" Content="Start new Game" HorizontalAlignment="Left" Margin="82,0,0,0" VerticalAlignment="Center" Width="128" Height="33" Click="btnDeclareWar_Click" RenderTransformOrigin="0.477,3.345" Grid.Column="1"/>
+        <Image x:Name="imgComputerWarCard2" Margin="346,44,72,282" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWarCard3" Margin="372,43,47,284" RenderTransformOrigin="-0.631,-0.765" />
     </Grid>
 </Window>
