@@ -35,7 +35,8 @@ namespace WarGame
             Game.Players.Add(PlayerComputer);
             Game.Players.Add(Player);
             Game.DealCards();
-            lblShowPlayerName.Content = playerName;
+            lblShowPlayerName.Content = "Player " + playerName;
+            lblShowComputerName.Content = "Player Computer";
             btnDeclareWar.Visibility = Visibility.Hidden;
             btnNewGame.Visibility = Visibility.Hidden;
             imgComputerDeck.Source = new BitmapImage(new Uri(backImagePath));
@@ -60,7 +61,9 @@ namespace WarGame
             imgComputerTurnCard.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + $"/CardPNGs/{PlayerComputer.TurnCard.ToString()}.PNG"));
             imgPlayerTurnCard.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"CardPNGs/{Player.TurnCard.ToString()}.PNG"));
 
-            lblTotalCards.Content = cardTotalPlayer;
+            lblTotalCards.Content = " has " + cardTotalPlayer + " cards";
+            lblComputerTotalCards.Content = " has " + cardTotalComputer + " cards";
+
             if ((result && (cardTotalPlayer < 4 || cardTotalComputer < 4)) || Game.GameOver())
             {
                 btnDeclareWar.Visibility = Visibility.Hidden;
@@ -90,7 +93,9 @@ namespace WarGame
             imgComputerWarBet.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + $"/CardPNGs/{PlayerComputer.TurnCard.ToString()}.PNG"));
             imgPlayerWarBet.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + $"CardPNGs/{Player.TurnCard.ToString()}.PNG"));
 
-            lblTotalCards.Content = cardTotalPlayer;
+            lblTotalCards.Content = " has " + cardTotalPlayer + " cards";
+            lblComputerTotalCards.Content = " has " + cardTotalComputer + " cards";
+
             if ((result && (cardTotalPlayer < 4 || cardTotalComputer < 4)) || Game.GameOver())
             {
                 btnDeclareWar.Visibility = Visibility.Hidden;
