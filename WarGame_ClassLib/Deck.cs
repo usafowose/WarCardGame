@@ -11,6 +11,7 @@ namespace WarGame_ClassLib
         static int DeckSize = 52;
         public List<Card> CardsInDeck  = new List<Card>();
 
+        //TODO - make CardsInDeck Card[DeckSize]
         public Deck() 
         {
             for (int i = 0; i < NumValues.Count; i++)

@@ -8,13 +8,11 @@ namespace WarGame_ClassLib
 {
     public class Card
     {
-        bool IsShowing;
         public int NumValue { get; set; }
         public string SuitName { get; set; }
 
         public Card(int NumValue, string SuitName) 
         {
-            IsShowing = false;
             this.SuitName = SuitName ;
             this.NumValue = NumValue;
         }
@@ -23,8 +21,6 @@ namespace WarGame_ClassLib
         {
             return SuitName + NumValue;
         }
-    }
-
-   
+    } 
 }
 

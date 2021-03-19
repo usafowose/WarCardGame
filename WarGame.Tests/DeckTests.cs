@@ -11,9 +11,7 @@ namespace WarGame.Tests
         public void Constructor_InitializeCards_Void()
         {
             Deck deck = new Deck();
-            //deck.GenerateDeck();
             Assert.AreEqual(52, deck.CardsInDeck.Count);
-            //Assert.AreEqual(26, player2.PlayerCards.Count);
         }
     }
 }

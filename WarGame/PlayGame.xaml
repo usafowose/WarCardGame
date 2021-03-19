@@ -7,17 +7,26 @@
         mc:Ignorable="d"
         Title="PlayGame" Height="450" Width="800" Background="#FF41945F">
     <Grid>
-        <Button x:Name="btnMakeTurn" Content="Make a turn" HorizontalAlignment="Left" Margin="608,72,0,0" VerticalAlignment="Top" Width="128" Click="btnMakeTurn_Click" Height="33"/>
-        <Label x:Name="lblShowPlayerName" Content="" HorizontalAlignment="Left" Margin="45,199,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="-1.082,2.135"/>
-        <Image x:Name="imgPlayer" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="45,100,650,-100" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgComputer" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="18,28,623,267" RenderTransformOrigin="-0.631,-0.765" />
-        <Image x:Name="imgComputerWar" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="230,-121,465,121" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgPlayerWar" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="230,100,465,-100" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgComputerWarBet" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="378,-120,317,120" RenderTransformOrigin="0.592,0.389" />
-        <Image x:Name="imgPlayerWarBet" Source="C:\Users\v-echernaya\source\repos\WarGame\Images\Clubs10.PNG" Margin="378,100,317,-100" RenderTransformOrigin="0.592,0.389" />
-        <Button x:Name="btnDeclareWar" Content="Declare a War" HorizontalAlignment="Left" Margin="608,134,0,0" VerticalAlignment="Top" Width="128" Height="33"/>
-        <Label x:Name="lblComputerCardTurn" HorizontalAlignment="Left" Margin="230,183,0,0" VerticalAlignment="Top" Width="105"/>
-        <Label x:Name="lblPlayerCardTurn" HorizontalAlignment="Left" Margin="230,217,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.506,4.261"/>
-        <Label x:Name="lblTurnResult" HorizontalAlignment="Left" Margin="588,247,0,0" VerticalAlignment="Top" Width="172"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="263*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnMakeTurn" Content="Make a turn" HorizontalAlignment="Left" Margin="82,64,0,0" VerticalAlignment="Top" Width="128" Click="btnMakeTurn_Click" Height="33" Grid.Column="1" RenderTransformOrigin="0.475,1.594"/>
+        <Button x:Name="btnDeclareWar" Content="Declare a War" HorizontalAlignment="Left" Margin="82,64,0,0" VerticalAlignment="Top" Width="130" Height="33" Click="btnDeclareWar_Click" Grid.Column="1" RenderTransformOrigin="0.484,-1.414"/>
+        <Button x:Name="btnNewGame" Content="Start new Game" HorizontalAlignment="Left" Margin="82,64,0,0" VerticalAlignment="Top" Width="130" Height="34" Click="btnNewGame_Click" RenderTransformOrigin="0.477,3.345" Grid.Column="1"/>
+        <Label x:Name="lblShowPlayerName" HorizontalAlignment="Left" Margin="45,199,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="-1.082,2.135"/>
+        <Label x:Name="lblTotalCards" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Image x:Name="imgComputerDeck" Margin="44,44,375,283" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerTurnCard" Margin="165,44,254,283" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWarCard" Margin="333,43,86,284" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWarBet" Margin="440,43,253,284" RenderTransformOrigin="-0.631,-0.765" Grid.ColumnSpan="2" />
+        <Image x:Name="imgPlayerDeck" Margin="44,266,375,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerTurnCard" Margin="165,266,254,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerWarCard" Margin="333,266,86,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerWarBet" Margin="440,266,253,61" RenderTransformOrigin="-0.631,-0.765" Grid.ColumnSpan="2" />
+        <Image x:Name="imgComputerWarCard2" Margin="346,43,72,284" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgComputerWarCard3" Margin="359,43,47,284" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerWarCard2" Margin="346,266,72,61" RenderTransformOrigin="-0.631,-0.765" />
+        <Image x:Name="imgPlayerWarCard3" Margin="359,266,47,61" RenderTransformOrigin="-0.631,-0.765" />
     </Grid>
 </Window>
