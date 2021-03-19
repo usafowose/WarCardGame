@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WarGame_ClassLib\WarGame_ClassLib.csproj" />
   </ItemGroup>
 
