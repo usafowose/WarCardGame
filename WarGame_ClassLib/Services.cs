@@ -8,10 +8,15 @@ namespace WarGame_ClassLib
 {
     public class Services
     {
+        /// <summary>
+        /// Method takes in List of <c>Card</c> objects to shuffle.
+        /// <c>Random</c> integers are generated and (iterated) indices are swapped with <c>Random</c> integer indices the same number of times as the List's length.
+        /// </summary>
+        /// <param name="CardsToShuffle"></param> represents the List of <c>Card</c> objects to be shuffled. <c>Card</c> objects are shuffled in-place
         public static void ShuffleCards(List<Card> CardsToShuffle)
         {
             Random random = new Random();
-            int n = CardsToShuffle.Count;
+            //int n = CardsToShuffle.Count;                                 // DO WE NEED THIS?
 
             for (int i = CardsToShuffle.Count -1; i >= 1; i--)
             {
@@ -21,7 +26,6 @@ namespace WarGame_ClassLib
                 CardsToShuffle[rnd] = CardsToShuffle[i];
                 CardsToShuffle[i] = value;
             }
-            //return CardsToShuffle;
         }
     }
 }
