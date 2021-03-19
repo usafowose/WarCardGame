@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:WarGame"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFAEB0DC">
+
+    <Grid Background="#f65009">
+        <Label Content="WAR" Margin="197,10,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Right" Margin="0,107,380,0" VerticalAlignment="Top" Height="53" Width="133" Click="Button_Click" RenderTransformOrigin="0.453,2.055" Grid.Row="2"/>
+        <Grid Background="#FFAEB0DC">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="67*"/>
@@ -20,5 +24,6 @@
         <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Right" Margin="0,30,331,0" VerticalAlignment="Top" Height="53" Width="133" Click="Button_Click" RenderTransformOrigin="0.453,2.055" Grid.Row="2"/>
         <TextBox x:Name="txtBoxPlayerName1" HorizontalAlignment="Left" Margin="72,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="1"/>
         <Label Content="Player: Please Enter Your Name!" HorizontalAlignment="Left" Margin="52,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="184" RenderTransformOrigin="1.381,-3.013" Grid.Column="1"/>
+    </Grid>
     </Grid>
 </Window>
