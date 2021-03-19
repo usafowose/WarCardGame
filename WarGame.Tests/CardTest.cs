@@ -24,8 +24,6 @@ namespace WarGame.Tests
             //Assert 
             Assert.AreEqual(4, testCard.NumValue);
             Assert.AreNotEqual(typeof(string), testCard.NumValue); 
-
-
         }
     }
 }

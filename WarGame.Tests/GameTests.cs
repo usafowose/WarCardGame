@@ -59,7 +59,7 @@ namespace WarGame.Tests
             player2.CardsForShuffle.Add(card3);
 
             player2.PlayerCards.Dequeue();
-            player2.MoveToPlayerCards();
+            player2.MoveToPlayerCards(1);
             player2.PlayerCards.Dequeue();
 
             var status = game.GameOver();
@@ -125,7 +125,7 @@ namespace WarGame.Tests
 
             player2.PlayerCards.Dequeue();
 
-            game.CheckPlayersDecks();
+            game.CheckPlayersDecks(1);
 
             Assert.AreEqual(1, player2.PlayerCards.Count);
             Assert.AreEqual(0, player2.CardsForShuffle.Count);

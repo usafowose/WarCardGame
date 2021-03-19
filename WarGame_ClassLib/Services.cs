@@ -11,8 +11,6 @@ namespace WarGame_ClassLib
         public static void ShuffleCards(List<Card> CardsToShuffle)
         {
             Random random = new Random();
-            int n = CardsToShuffle.Count;
-
             for (int i = CardsToShuffle.Count -1; i >= 1; i--)
             {
                 int rnd = random.Next(0, i);
@@ -21,7 +19,6 @@ namespace WarGame_ClassLib
                 CardsToShuffle[rnd] = CardsToShuffle[i];
                 CardsToShuffle[i] = value;
             }
-            //return CardsToShuffle;
         }
     }
 }

@@ -163,15 +163,11 @@ namespace WarGame.Tests
             testPlayer.CardsForShuffle.Add(newCard3);
 
             // Act
-            testPlayer.MoveToPlayerCards();
+            testPlayer.MoveToPlayerCards(1);
 
             // Assert
             Assert.AreEqual(5, testPlayer.PlayerCards.Count);
-            //Assert.AreNotEqual(0, testPlayer.PlayerCards.Count);
             Assert.AreEqual(0, testPlayer.CardsForShuffle.Count);
-            //Assert.AreNotEqual(5, testPlayer.CardsForShuffle.Count);
-            //Assert.AreEqual(5, testPlayer.PlayerCards.Peek().NumValue);
         }
-
     }
 }
