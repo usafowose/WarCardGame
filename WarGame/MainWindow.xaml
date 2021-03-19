@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:WarGame"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+<<<<<<<<< Temporary merge branch 1
+    <Grid Background="#f65009">
+        <Label Content="WAR" Margin="197,10,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Right" Margin="0,107,380,0" VerticalAlignment="Top" Height="53" Width="133" Click="Button_Click" RenderTransformOrigin="0.453,2.055" Grid.Row="2"/>
+=========
     <Grid Background="#FFAEB0DC">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*"/>
